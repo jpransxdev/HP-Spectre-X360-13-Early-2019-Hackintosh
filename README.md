@@ -58,10 +58,11 @@ For more details in creating the EFI, following the link above.
 * Should ditch fakepciid for an SSDT if it's even needed.
 
 
-## Patch Your DSDT! Press F4 to dump DSDT from Clover.
+## Patch Your DSDT!
 
-Apply all DSDT Patches from this repo. Use latest MaciASL otherwise you get compilation errors.
-Search your DSDT for PS2K and replace device.
+* Press F4 to dump DSDT from Clover.
+* Apply all DSDT Patches from this repo. Use latest MaciASL otherwise you get compilation errors.
+* Search your DSDT for PS2K and replace device.
 ```
                 Device (PS2K) //Keyboard
                 {
