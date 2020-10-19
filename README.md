@@ -54,11 +54,14 @@ For more details in creating the EFI, following the link above.
 * Type-C to HDMI is bugged. (probably need to inject EDID)
 * FaceTime
 
-# Anything else?
+### Anything else?
 * Should ditch fakepciid for an SSDT if it's even needed.
 
-Apply DSDT Patches from this repo.
-Search DSDT for PS2K and replace device.
+
+#Patch Your DSDT! Press F4 to dump DSDT from Clover.
+
+Apply all DSDT Patches from this repo. Use latest MaciASL otherwise you get compilation errors.
+Search your DSDT for PS2K and replace device.
 ```
                 Device (PS2K) //Keyboard
                 {
