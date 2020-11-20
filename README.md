@@ -57,8 +57,9 @@ For more details in creating the EFI, following the link above.
 * Screen brightness adjustment
 * The remaining battery capacity (The frequency of updating the battery level is unstable.)
 * Wi-Fi(Built-in intel chip)
+* Bluetooth
 * Siri
-* ~~microSD card reader~~
+* MicroSD
 * Sleep
 * The screen return after opening the lid
 * App Store
@@ -66,16 +67,10 @@ For more details in creating the EFI, following the link above.
 * macOS update
 
 ### What doesn't work?
-* Bluetooth(It can connect but cannot communicate.)我试了，好使，不过不是特别稳定
 * Fingerprint authentication sensor
-* Camera (it may be used with some software because it is recognized as a USB camera) 微信视频貌似都正常
-* Left and right speakers, need to create a 3-speaker layout for applealc)
-* Type-C to HDMI is bugged. (probably need to inject EDID)
-* FaceTime
-
-### Anything else?
-* Should ditch fakepciid for an SSDT if it's even needed.
-
+* Camera, detected but not working
+* Type-C to HDMI is bugged.
+* Facetime and Messages
 
 ## Patch Your DSDT!
 
