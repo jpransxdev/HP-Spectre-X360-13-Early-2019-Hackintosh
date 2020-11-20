@@ -60,8 +60,6 @@ For more details in creating the EFI, following the link above.
 * Bluetooth
 * Siri
 * MicroSD
-* Sleep
-* The screen return after opening the lid
 * App Store
 * iCloud
 * macOS update
@@ -71,6 +69,8 @@ For more details in creating the EFI, following the link above.
 * Camera, detected but not working
 * Type-C to HDMI is bugged.
 * Facetime and Messages
+* Sleep
+* The screen return after opening the lid
 
 ## Patch Your DSDT!
 
