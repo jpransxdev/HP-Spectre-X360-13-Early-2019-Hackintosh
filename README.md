@@ -23,6 +23,25 @@ For more details in creating the EFI, following the link above.
 
 > For different model, please follow [tonymacx86](https://www.tonymacx86.com/threads/guide-hp-spectre-x360-13-ap0037tu-late-2018.295518/) to generate your own DSDT.aml, apply patches and put it back to EFI.
 
+### To boot you need to choose PreLoader.efi 
+> Thanks to ctxdl @tonymac
+* Use EasyUefi in windows.
+* Open EasyUEFI, and click on the button labeled “Manage EFI Boot Option”
+* Click on the plus button alongside the list of boot entries to add a new entry
+* Select “Linux or Other OS” in the Type menu
+* Add a description for the bootloader entry, such as “Clover PreLoader”
+* Select the EFI partition on your disk
+* Now click the browse button, and browse to the CLOVER folder and select PreLoader.efi as the file
+* Click OK to add the entry. Use the up and down arrows to set the priority of the boot entry if you’d like
+* You can also adjust the boot order from BIOS.
+
+### Notes about Audio
+> I recommend you get an app called Loopback, it enables you to create a virtual device, name it and passthrough channels 1 and 2 to multiple devices
+* Add both Internal Speakers as Monitors
+* Adjust the volume of top speakers to to 100% and bottom to 70 or whatever you like.
+* Choose your newly created device as the audio output.
+* Use native volume controls to adjust the volume of both simultaneously. 
+
 ### What works?
 * Keyboard
 * Trackpad(I2C)
