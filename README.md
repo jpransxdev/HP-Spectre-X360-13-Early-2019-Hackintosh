@@ -1,7 +1,7 @@
 # HP-Spectre-X360-13-Early-2019-Hackintosh
 HP Spectre x360 Hackintosh 
 
-Forked From https://github.com/SeptemberHX/HP-Spectre-X360-13-late-2018-Hackintosh
+Forked but heavily changed from https://github.com/SeptemberHX/HP-Spectre-X360-13-late-2018-Hackintosh
 
 # Hackintosh Clover EFI for HP Spectre X360 13 Early 2019 ap0xxx
 
