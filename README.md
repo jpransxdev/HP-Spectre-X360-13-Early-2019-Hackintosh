@@ -24,6 +24,7 @@ For more details in creating the EFI, following the link above.
 > For different model, please follow [tonymacx86](https://www.tonymacx86.com/threads/guide-hp-spectre-x360-13-ap0037tu-late-2018.295518/) to generate your own DSDT.aml, apply patches and put it back to EFI.
 
 ### To boot you need to choose PreLoader.efi 
+To add Clover preloader to Boot menu you can create a new partition for Windows on the drive, install windows then
 > Thanks to ctxdl @tonymac
 * Use EasyUefi in windows.
 * Open EasyUEFI, and click on the button labeled “Manage EFI Boot Option”
