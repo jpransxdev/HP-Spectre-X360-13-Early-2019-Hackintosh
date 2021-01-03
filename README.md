@@ -58,6 +58,7 @@ To add Clover preloader to Boot menu you can create a new partition for Windows 
 * Built-in microphone
 * Headphone
 * Graphics acceleration
+* Type C to HDMI
 * Thunderbolt 3
 * USB3.1 Gen2
 * Connection of external display for conversion from Type-C to HDMI
@@ -70,14 +71,13 @@ To add Clover preloader to Boot menu you can create a new partition for Windows 
 * App Store
 * iCloud
 * macOS update
+* Sleep
+* Lid Wake
 
 ### What doesn't work?
-* Fingerprint authentication sensor
-* Camera, detected but not working
-* Type-C to HDMI is bugged.
-* Facetime and Messages
-* Sleep
-* The screen return after opening the lid
+* Fingerprint authentication sensor (synaptics)
+* Camera, detected but not working (lite-on camera)
+* Facetime and Messages (probably can be fixed)
 
 ## Patch Your DSDT!
 
