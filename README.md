@@ -52,9 +52,9 @@ To add Clover preloader to Boot menu you can create a new partition for Windows 
 ### What works?
 * Keyboard
 * Trackpad(I2C)
-* Touchpad(I2C)
+* Touchscreen(I2C)
 * Touch pen
-* Built-in top speaker
+* Built-in Quad speakers (read the note above)
 * Built-in microphone
 * Headphone
 * Graphics acceleration
@@ -63,8 +63,8 @@ To add Clover preloader to Boot menu you can create a new partition for Windows 
 * USB3.1 Gen2
 * Connection of external display for conversion from Type-C to HDMI
 * Screen brightness adjustment
-* The remaining battery capacity (The frequency of updating the battery level is unstable.)
-* Wi-Fi(Built-in intel chip)
+* The remaining battery capacity (unstable.)
+* Wi-Fi (Built-in intel ac 9560)
 * Bluetooth
 * Siri
 * MicroSD
