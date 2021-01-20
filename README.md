@@ -5,9 +5,10 @@ Forked but heavily changed from https://github.com/SeptemberHX/HP-Spectre-X360-1
 
 # Hackintosh Clover EFI for HP Spectre X360 13 Early 2019 ap0xxx
 
-# Macos 11.1 (bios f.42)
+# Macos 11.1
 
 * CPU: Core ™ i5-8265u
+* BIOS F.42
 * iGPU: Intel Graphics UHD 620
 * RAM: 8GB
 * Storage: TOSHIBA KXG50ZNV256G NVMe
