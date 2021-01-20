@@ -299,34 +299,34 @@
 		<key>#AddProperties</key>
 		<array>
 			<dict>
-				<key>Comment</key>
-				<string>hda-gfx=onboard-1 for HDMI audio</string>
-				<key>Value</key>
-				<data>b25ib2FyZC0xAA==</data>
-				<key>Key</key>
-				<string>hda-gfx</string>
 				<key>Device</key>
 				<string>IntelGFX</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>hda-gfx=onboard-1 for HDMI audio</string>
 				<key>Value</key>
 				<data>b25ib2FyZC0xAA==</data>
 				<key>Key</key>
 				<string>hda-gfx</string>
-				<key>Device</key>
-				<string>HDA</string>
+				<key>Comment</key>
+				<string>hda-gfx=onboard-1 for HDMI audio</string>
 			</dict>
 			<dict>
+				<key>Device</key>
+				<string>HDA</string>
+				<key>Value</key>
+				<data>b25ib2FyZC0xAA==</data>
+				<key>Key</key>
+				<string>hda-gfx</string>
 				<key>Comment</key>
-				<string>layout-id=3</string>
+				<string>hda-gfx=onboard-1 for HDMI audio</string>
+			</dict>
+			<dict>
+				<key>Device</key>
+				<string>HDA</string>
 				<key>Value</key>
 				<data>AwAAAA==</data>
 				<key>Key</key>
 				<string>layout-id</string>
-				<key>Device</key>
-				<string>HDA</string>
+				<key>Comment</key>
+				<string>layout-id=3</string>
 			</dict>
 			<dict>
 				<key>Key</key>
@@ -459,6 +459,10 @@
 		</array>
 		<key>KernelXCPM</key>
 		<false/>
+		<key>ForceKextsToLoad</key>
+		<array>
+			<string>/System/Library/Extensions/IO80211Family.kext</string>
+		</array>
 		<key>DellSMBIOSPatch</key>
 		<false/>
 		<key>AppleIntelCPUPM</key>
@@ -530,7 +534,7 @@
 		<key>ProvideMaxSlide</key>
 		<integer>0</integer>
 		<key>EnableWriteUnprotector</key>
-		<true/>
+		<false/>
 		<key>EnableSafeModeSlide</key>
 		<true/>
 		<key>DisableRtcChecksum</key>
@@ -541,22 +545,26 @@
 		<true/>
 		<key>ProvideConsoleGopEnable</key>
 		<true/>
+		<key>XhciPortLimit</key>
+		<false/>
 		<key>SyncRuntimePermissions</key>
 		<true/>
 		<key>ProvideCustomSlide</key>
 		<true/>
 		<key>PowerTimeoutKernelPanic</key>
-		<false/>
-		<key>ExternalDiskIcons</key>
 		<true/>
+		<key>ExternalDiskIcons</key>
+		<false/>
 		<key>SetupVirtualMap</key>
 		<true/>
 		<key>DisableVariableWrite</key>
+		<false/>
+		<key>DisableLinkeditJettison</key>
 		<true/>
 		<key>RebuildAppleMemoryMap</key>
 		<true/>
 		<key>FuzzyMatch</key>
-		<false/>
+		<true/>
 	</dict>
 	<key>Comment</key>
 	<string>This file is for 10.12.6+ with native KabyLake support</string>

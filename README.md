@@ -5,7 +5,7 @@ Forked but heavily changed from https://github.com/SeptemberHX/HP-Spectre-X360-1
 
 # Hackintosh Clover EFI for HP Spectre X360 13 Early 2019 ap0xxx
 
-# Macos 10.15.7
+# Macos 11.1 (bios f.42)
 
 * CPU: Core ™ i5-8265u
 * iGPU: Intel Graphics UHD 620
@@ -50,172 +50,17 @@ To add Clover preloader to Boot menu you can create a new partition for Windows 
 * Use native volume controls to adjust the volume of both simultaneously. 
 
 ### What works?
-* Keyboard
-* Trackpad(I2C)
-* Touchscreen(I2C)
-* Touch pen
-* Built-in Quad speakers (read the note above)
-* Built-in microphone
-* Headphone
-* Graphics acceleration
-* Type C to HDMI
-* Thunderbolt 3
-* USB3.1 Gen2
-* Connection of external display for conversion from Type-C to HDMI
-* Screen brightness adjustment
-* The remaining battery capacity (unstable.)
-* Wi-Fi (Built-in intel ac 9560)
-* Bluetooth
-* Siri
-* MicroSD
-* App Store
-* iCloud
-* macOS update
-* Sleep
-* Lid Wake
+* You tell me.
 
 ### What doesn't work?
+* Two sets of audio outputs need to be joined into one (see the note above)
 * Fingerprint authentication sensor (synaptics)
+* Battery remaining is unstable.
 * Camera, detected but not working (lite-on camera)
 * Facetime and Messages (probably can be fixed)
+* Hibernation
 
 ## Patch Your DSDT!
 
 * Press F4 to dump DSDT from Clover.
 * Apply all DSDT Patches from this repo. Use latest MaciASL otherwise you get compilation errors.
-* Search your DSDT for PS2K and replace device.
-```
-                Device (PS2K) //Keyboard
-                {
-                    Name (_HID, EisaId ("PNP0303"))
-                    Name (_CID, EisaId ("PNP030B"))
-                    Method (_STA, 0, NotSerialized)
-                    {
-                        If (And (IOST, 0x0400))
-                        {
-                            Return (0x0F)
-                        }
-                        Else
-                        {
-                            Return (Zero)
-                        }
-                    }
-                    Name (_CRS, ResourceTemplate ()
-                    {
-                        IO (Decode16,
-                            0x0060,             // Range Minimum
-                            0x0060,             // Range Maximum
-                            0x00,               // Alignment
-                            0x01,               // Length
-                            )
-                        IO (Decode16,
-                            0x0064,             // Range Minimum
-                            0x0064,             // Range Maximum
-                            0x00,               // Alignment
-                            0x01,               // Length
-                            )
-                        IRQNoFlags ()
-                            {1}
-                    })
-                    Name (_PRS, ResourceTemplate ()
-                    {
-                        StartDependentFn (0x00, 0x00)
-                        {
-                            FixedIO (
-                                0x0060,             // Address
-                                0x01,               // Length
-                                )
-                            FixedIO (
-                                0x0064,             // Address
-                                0x01,               // Length
-                                )
-                            IRQNoFlags ()
-                                {1}
-                        }
-                        EndDependentFn ()
-                    })
-                    Method (_PSW, 1, NotSerialized)
-                    {
-                        Store (Arg0, KBFG)
-                    }
-                }
-                Scope (\)
-                {
-                    Name (KBFG, Zero)
-                }
-                Method (PS2K._PRW, 0, NotSerialized)
-                {
-                    Return (GPRW (0x1D, 0x04))
-                }
-                Device (PS2M) //Mouse
-                {
-                    Name (_HID, EisaId ("PNP0F03"))
-                    Name (_CID, EisaId ("PNP0F13"))
-                    Method (_STA, 0, NotSerialized)
-                    {
-                        If (And (IOST, 0x4000))
-                        {
-                            Return (0x0F)
-                        }
-                        Else
-                        {
-                            Return (Zero)
-                        }
-                    }
-                    Name (CRS1, ResourceTemplate ()
-                    {
-                        IRQNoFlags ()
-                            {12}
-                    })
-                    Name (CRS2, ResourceTemplate ()
-                    {
-                        IO (Decode16,
-                            0x0060,             // Range Minimum
-                            0x0060,             // Range Maximum
-                            0x00,               // Alignment
-                            0x01,               // Length
-                            )
-                        IO (Decode16,
-                            0x0064,             // Range Minimum
-                            0x0064,             // Range Maximum
-                            0x00,               // Alignment
-                            0x01,               // Length
-                            )
-                        IRQNoFlags ()
-                            {12}
-                    })
-                    Method (_CRS, 0, NotSerialized)
-                    {
-                        If (And (IOST, 0x0400))
-                        {
-                            Return (CRS1)
-                        }
-                        Else
-                        {
-                            Return (CRS2)
-                        }
-                    }
-                    Name (_PRS, ResourceTemplate ()
-                    {
-                        StartDependentFn (0x00, 0x00)
-                        {
-                            IRQNoFlags ()
-                                {12}
-                        }
-                        EndDependentFn ()
-                    })
-                    Method (_PSW, 1, NotSerialized)
-                    {
-                        Store (Arg0, MSFG)
-                    }
-                }
-                Scope (\)
-                {
-                    Name (MSFG, Zero)
-                }
-                Method (PS2M._PRW, 0, NotSerialized)
-                {
-                    Return (GPRW (0x1D, 0x04))
-                }
-```
-
