@@ -24,6 +24,8 @@ For more details in creating the EFI, following the link above.
 
 > For different model, please follow [tonymacx86](https://www.tonymacx86.com/threads/guide-hp-spectre-x360-13-ap0037tu-late-2018.295518/) to generate your own DSDT.aml, apply patches and put it back to EFI.
 
+* I recommend you disable Automatically adjust backlight in display preferences if you want to use the brightness slider in quick controls!
+
 ### Fix for Safari video freezes on YouTube (Safari 14)!
 * Go to safari preferences > Advanced
 * Enable develop menu
