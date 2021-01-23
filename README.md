@@ -21,7 +21,7 @@ Forked but heavily changed from https://github.com/SeptemberHX/HP-Spectre-X360-1
 ### Bios Settings
 * Default values, except
 * Secure Boot Off
-* Virtualization Enabled
+* Virtualization Enabled (You can disable then you don't need DisableIoMapper quirk in the config)
 * Battery Remaining Enabled
 
 > DO NOT use the DSDT.aml in this repo. Follow  [tonymacx86](https://www.tonymacx86.com/threads/guide-hp-spectre-x360-13-ap0037tu-late-2018.295518/) to create your own DSDT.aml
