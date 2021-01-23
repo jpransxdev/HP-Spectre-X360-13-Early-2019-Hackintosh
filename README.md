@@ -18,6 +18,12 @@ Forked but heavily changed from https://github.com/SeptemberHX/HP-Spectre-X360-1
 * Trackpad: SYNA329A
 * Touchpad: ELAN2514
 
+### Bios Settings
+* Default values, except
+* Secure Boot Off
+* Virtualization Enabled
+* Battery Remaining Enabled
+
 > DO NOT use the DSDT.aml in this repo. Follow  [tonymacx86](https://www.tonymacx86.com/threads/guide-hp-spectre-x360-13-ap0037tu-late-2018.295518/) to create your own DSDT.aml
 
 For more details in creating the EFI, following the link above.
