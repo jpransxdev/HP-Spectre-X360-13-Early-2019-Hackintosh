@@ -53,9 +53,9 @@ To add Clover preloader to Boot menu you can create a new partition for Windows 
 
 ### Notes about Audio
 > You can create an aggregate audio device from Audio Midi Setup but an aggregate device will have no volume controls. To solve this you have three options.
-* Loopback by rogue amoeba (the one i use) - https://rogueamoeba.com/loopback/
-* MultiSoundChanger - https://github.com/rlxone/MultiSoundChanger/
-* Sound Control by Static Z - https://staticz.com/soundcontrol/
+* Loopback by rogue amoeba (the one i use) - https://rogueamoeba.com/loopback/ (100+ usd, expensive if you're not going to use it for anything else)
+* MultiSoundChanger - https://github.com/rlxone/MultiSoundChanger/ (free and open source)
+* Sound Control by Static Z - https://staticz.com/soundcontrol/ (19 bucks but not sure if it works with big sur yet.)
 
 ### What works?
 * You tell me.
