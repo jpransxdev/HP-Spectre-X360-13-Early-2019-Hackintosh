@@ -52,11 +52,10 @@ To add Clover preloader to Boot menu you can create a new partition for Windows 
 * You can also adjust the boot order from BIOS.
 
 ### Notes about Audio
-> I recommend you get an app called Loopback, it enables you to create a virtual device, name it and passthrough channels 1 and 2 to multiple devices
-* Add both Internal Speakers as Monitors
-* Adjust the volume of top speakers to to 100% and bottom to 70 or whatever you like.
-* Choose your newly created device as the audio output.
-* Use native volume controls to adjust the volume of both simultaneously. 
+> You can create an aggregate audio device from Audio Midi Setup but an aggregate device will have no volume controls. To solve this you have three options.
+* Loopback by rogue amoeba (the one i use) - https://rogueamoeba.com/loopback/
+* MultiSoundChanger - https://github.com/rlxone/MultiSoundChanger/
+* Sound Control by Static Z - https://staticz.com/soundcontrol/
 
 ### What works?
 * You tell me.
